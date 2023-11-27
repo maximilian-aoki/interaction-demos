@@ -1,0 +1,1 @@
+{"version":3,"file":"app.bundle.js","mappings":"mBAOAA,QAAQC,IAAI,Y","sources":["webpack://interaction-demos/./src/index.js"],"sourcesContent":["// import css\nimport './static/reset.css';\nimport './static/style.css';\n\n// import modules (events optional)\n// import * as Events from './assets/events';\n\nconsole.log('Yo world!');\n"],"names":["console","log"],"sourceRoot":""}
