@@ -1,4 +1,4 @@
-const showSidebar = (function () {
+const showSidebar = (() => {
   // dom caching
   const sidebar = document.querySelector('.sidebar');
   const activateButton = document.querySelector('.sidebar-activate>button');

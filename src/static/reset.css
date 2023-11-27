@@ -127,7 +127,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* SELF ADDED */
 a {
   text-decoration: none;
   color: black;
+}
+button {
+  cursor: pointer;
 }
