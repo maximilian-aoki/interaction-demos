@@ -6,10 +6,30 @@
     <title>Interaction Demos</title>
   </head>
   <body>
-    <div class="outer-container">
-      <div class="nav"></div>
-      <div class="content"></div>
+    <div class="outer-container grid">
+      <div class="nav grid">
+        <div class="sidebar-activate">
+          <button type="button">show sidebar</button>
+        </div>
+        <div class="header">WEBSITE TITLE</div>
+        <ul class="nav-options grid">
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+      </div>
+      <div class="content grid"></div>
     </div>
-    <div class="sidebar"></div>
+    <div class="sidebar grid">
+      <div class="sidebar-header grid">
+        <h2>SIDEBAR</h2>
+        <button type="button">hide</button>
+      </div>
+      <ul class="sidebar-options">
+        <li><a href="#goToThing1">Thing 1</a></li>
+        <li><a href="#goToThing2">Thing 2</a></li>
+        <li><a href="#goToThing3">Thing 3</a></li>
+      </ul>
+    </div>
   </body>
 </html>
