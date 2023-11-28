@@ -10,6 +10,10 @@
   },
   "rules": {
     "no-console": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off"
   }
 }

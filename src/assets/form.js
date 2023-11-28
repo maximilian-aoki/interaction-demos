@@ -5,7 +5,7 @@ const form = (() => {
   const passwordInput = document.querySelector('#password');
   const passwordCheckInput = document.querySelector('#password-confirm');
   const submitButton = document.querySelector('form>button');
-  const submitMessage = document.querySelector('.submit-message');
+  // const submitMessage = document.querySelector('.submit-message');
 
   // methods
   let msg;
