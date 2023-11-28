@@ -1,11 +1,12 @@
+// import photos
+import Tree1 from '../static/images/tree-1.jpg';
+import Tree2 from '../static/images/tree-2.jpg';
+import Tree3 from '../static/images/tree-3.jpg';
+import Tree4 from '../static/images/tree-4.jpg';
+import Tree5 from '../static/images/tree-5.jpg';
+
 // for testing
-const picsToUse = [
-  '../static/images/tree-4.jpg',
-  '../static/images/tree-3.jpg',
-  '../static/images/tree-5.jpg',
-  '../static/images/tree-2.jpg',
-  '../static/images/tree-1.jpg',
-];
+const picsToUse = [Tree3, Tree4, Tree5, Tree2, Tree1];
 
 // cache dom
 const picContainer = document.querySelector('.inside-frame');
