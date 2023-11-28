@@ -54,7 +54,68 @@
           </div>
           <div class="form-container">
             <h2>JS Form Validator</h2>
-            <div class="form grid"></div>
+            <div class="form grid">
+              <form action="/" novalidate>
+                <h3>All Fields are Required!</h3>
+                <div class="email input grid">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="abc@mail.com"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}"
+                    required
+                  />
+                  <p>message</p>
+                </div>
+                <div class="country input grid">
+                  <label for="country">Country:</label>
+                  <input
+                    type="text"
+                    id="country"
+                    placeholder="Zootopia"
+                    required
+                  />
+                  <p>message</p>
+                </div>
+                <div class="zip input grid">
+                  <label for="zip">Zip Code:</label>
+                  <input
+                    type="text"
+                    id="zip"
+                    placeholder="A1B 2C3"
+                    pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$"
+                    required
+                  />
+                  <p>message</p>
+                </div>
+                <div class="password input grid">
+                  <label for="password">Password:</label>
+                  <input
+                    class="info"
+                    type="password"
+                    id="password"
+                    placeholder="******"
+                    pattern="(?=(?:.*\d){3})(?=(?:.*[a-z]){3})^[a-z\d]*$"
+                    required
+                  />
+                  <p>must contain at least 3 letters and 3 numbers</p>
+                </div>
+                <div class="password-confirm input grid">
+                  <label for="password-confirm">Confirm Password:</label>
+                  <input
+                    class="info"
+                    type="password"
+                    id="password-confirm"
+                    placeholder="******"
+                    required
+                  />
+                  <p>must match initial password</p>
+                </div>
+                <button type="submit">Submit Form</button>
+                <p class="submit-message">🙏 Successful Submission! 🙏</p>
+              </form>
+            </div>
           </div>
         </div>
       </div>

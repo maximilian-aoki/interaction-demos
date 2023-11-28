@@ -3,7 +3,7 @@ import './static/reset.css';
 import './static/style.css';
 
 // import modules (events optional)
-// import * as Events from './assets/events';
 import showSidebar from './assets/sidebar';
 import showDropDown from './assets/nav';
 import buildSlider from './assets/slider';
+import form from './assets/form';

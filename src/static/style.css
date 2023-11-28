@@ -33,7 +33,6 @@ body {
 }
 
 /* NAV */
-
 .nav {
   grid-area: 1 / 1 / 2 / -1;
   grid-template-columns: 1fr 1fr 1fr;
@@ -107,8 +106,8 @@ body {
 .drop-down a {
   color: white;
 }
-/* SIDEBAR */
 
+/* SIDEBAR */
 .sidebar {
   grid-template-rows: 5rem 1fr;
   gap: 1rem;
@@ -158,7 +157,6 @@ body {
 }
 
 /* CONTENT */
-
 .content {
   background-color: white;
   place-items: center;
@@ -193,6 +191,7 @@ body {
   position: relative;
   z-index: 3;
   overflow: auto;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.35);
 }
 .inside-frame {
   position: absolute;
@@ -258,3 +257,91 @@ body {
 }
 
 /* FORM */
+.form {
+  border: 0.4rem solid var(--x-dark-grey);
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--grey);
+  position: relative;
+}
+.form h3 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.input {
+  margin-bottom: 0.3rem;
+}
+.input > label {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.input > input {
+  border: 1px solid var(--m-dark-grey);
+  background: white;
+  outline: none;
+  height: 2rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  padding: 0 0.7rem;
+  font-weight: 200;
+}
+.input > input::placeholder {
+  color: rgb(191, 191, 191);
+  font-weight: 200;
+}
+.input > p {
+  font-size: 0.8rem;
+  padding: 0 0.7rem;
+  text-align: end;
+  color: rgb(119, 119, 119);
+  visibility: hidden;
+}
+form > button {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #1789fc;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+form > button:hover {
+  background-color: var(--x-dark-grey);
+}
+.submit-message {
+  position: absolute;
+  text-align: center;
+  left: 19%;
+  bottom: -7%;
+  font-weight: 600;
+  visibility: hidden;
+}
+/* INFO FORM ELEMENTS */
+.input > input.info + p {
+  visibility: visible;
+}
+/* INVALID FORM INPUTS */
+.input > input.invalid {
+  border: 1px solid rgb(246, 92, 92);
+}
+.input > input.invalid + p {
+  color: rgb(246, 92, 92);
+  visibility: visible;
+}
+/* VALID FORM INPUTS */
+.input > input.valid {
+  border: 1px solid rgb(76, 158, 76);
+}
+.input > input.valid + p {
+  visibility: hidden;
+}
+/* APPROVED FORM */
+.submit-message.approved {
+  visibility: visible;
+}
