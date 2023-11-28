@@ -11,7 +11,7 @@
     "init-server": "npm install webpack-dev-server --save-dev",
     "init-merge": "npm install webpack-merge --save-dev",
     "init-css": "npm install css-loader mini-css-extract-plugin --save-dev",
-    "init-babel": "npm install babel-core babel-preset-env babel-loader --save-dev",
+    "init-babel": "npm install babel-loader @babel/core @babel/preset-env --save-dev",
     "init-formatting": "npm install eslint --save-dev && npm init @eslint/config && npm install prettier --save-dev --save-exact && npm install eslint-config-prettier --save-dev",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",

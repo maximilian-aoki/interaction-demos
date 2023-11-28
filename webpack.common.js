@@ -18,11 +18,15 @@ module.exports = {
     rules: [
       // BABEL:
       // {
-      //   test: /\.js$/,
+      //   test: /\.(?:js|mjs|cjs)$/,
       //   exclude: /node_modules/,
       //   use: {
       //     loader: 'babel-loader',
-      //     options: {presets: ['env']}
+      //     options: {
+      //       presets: [
+      //         ['@babel/preset-env', { targets: "defaults" }]
+      //       ]
+      //     }
       //   }
       // },
 
