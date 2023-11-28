@@ -6,5 +6,4 @@ import './static/style.css';
 // import * as Events from './assets/events';
 import showSidebar from './assets/sidebar';
 import showDropDown from './assets/nav';
-
-console.log('Yo world!');
+import buildSlider from './assets/slider';

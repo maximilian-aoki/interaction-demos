@@ -3,6 +3,7 @@ html {
   font-size: 16px;
   --grey: #f3f3f3;
   --dark-grey: #ebebeb;
+  --m-dark-grey: rgb(132, 132, 132);
   --x-dark-grey: rgb(71, 71, 71);
 }
 *,
@@ -27,7 +28,7 @@ body {
 }
 .outer-container {
   min-height: 100vh;
-  min-width: 60rem;
+  min-width: 85rem;
   grid-template: 5rem 1fr / 1fr;
 }
 
@@ -43,11 +44,22 @@ body {
 }
 .sidebar-activate {
   align-self: center;
-  padding-left: 1rem;
+  padding-left: 2rem;
+}
+.sidebar-activate button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-image: url(./images/sidebar-enter.svg);
+  background-position: center;
+  background-size: cover;
 }
 .header {
   text-align: center;
   align-self: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0 1rem;
 }
 .nav-options {
   grid-template-columns: 1fr 1fr 1fr;
@@ -118,21 +130,131 @@ body {
   padding: 1rem;
   grid-template-columns: 1fr 3rem;
   align-items: center;
+  font-size: 1.5rem;
+}
+.sidebar-header button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-image: url(./images/sidebar-leave.svg);
+  background-position: center;
+  background-size: cover;
 }
 .sidebar-options {
   padding: 0 1.5rem;
   font-size: 1.2rem;
+  grid-auto-rows: 3rem;
 }
 .sidebar-options > li {
   margin-bottom: 1rem;
+  align-content: center;
+}
+.sidebar-options a {
+  justify-self: stretch;
 }
 .sidebar-options > li:hover {
   background-color: rgb(211, 211, 211);
+  cursor: pointer;
 }
 
 /* CONTENT */
 
 .content {
   background-color: white;
+  place-items: center;
   z-index: 1;
 }
+.inner-content {
+  width: 50rem;
+  height: 30rem;
+  margin-top: -4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.inner-content > div {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+  gap: 0.4rem;
+}
+.inner-content h2 {
+  align-self: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* IMAGE SLIDER */
+.image-slider {
+  grid-template-rows: 25rem 1fr;
+}
+.frame {
+  border: 0.4rem solid var(--x-dark-grey);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 3;
+  overflow: auto;
+}
+.inside-frame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+
+  transform: translateX(-00%);
+  transition: transform 200ms ease-in-out;
+}
+.pic {
+  background-position: center;
+  background-size: cover;
+}
+.backwards,
+.forwards {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  z-index: 3;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-position: center;
+  background-size: cover;
+}
+.backwards:hover,
+.forwards:hover {
+  background-color: var(--x-dark-grey);
+}
+.backwards {
+  background-image: url(./images/chevron-left.svg);
+  top: 45%;
+  left: 2%;
+}
+.forwards {
+  background-image: url(./images/chevron-right.svg);
+  top: 45%;
+  right: 2%;
+}
+.markers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.marker {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 2px solid var(--x-dark-grey);
+}
+.marker:hover {
+  background-color: #f0d3f7;
+  border-color: #120d31;
+  cursor: pointer;
+}
+.marker.active {
+  background-color: #e684ff;
+}
+
+/* FORM */
